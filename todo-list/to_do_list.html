@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+
+</head>
+
+<body>
+    <div class="container" id="container">
+        <h3 id="title">정말 간단 TODO 리스트</h3>
+        <div id="sub-container">
+            <ul class="list-group" id="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center" id="list-group-item">
+                    오늘의 할 일 목록 하나!
+                    <span class="badge badge-primary badge-pill" onclick="deleteTodo()">삭제</span>
+                </li>
+            </ul>
+        </div>
+        <div class="input-group mb-3" id="input-group">
+            <input type="text" class="form-control" id="input-area" placeholder="할 일을 추가해주세요">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-area" onclick="addTodo()">추가</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        // 웹페이지가 열리자마자 바로 실행되는 함수들은 이 아래에 있다.
+        $(document).ready(function(){
+            console.log('시작')
+
+            $.ajax({
+                url:"https://api.themoviedb.org/3/movie/popular?api_key=10923b261ba94d897ac6b81148314a3f&page=1",
+                data:{},
+                type:"GET",  // 도메인에 api를 쓸 수 있는 형태는 GET 방식
+                success:function(json){
+                    console.log(json)
+                    // json.total_results
+                },
+                error:function(err){
+
+                }
+            })
+
+
+        })
+
+
+        function addTodo() {
+            let todo = $("#input-area").val();
+            let id = Math.floor(Math.random() * 100000)  // 랜덤한 정수(반올림 시킴) // li태그에 고유한 id값 주기
+
+            let list_item = `<li class="list-group-item d-flex justify-content-between align-items-center list-${id}" id="list-group-item">
+                ${todo}
+                <span class="badge badge-primary badge-pill"
+                onclick="deleteTodo(${id})">삭제</span>
+            </li>`
+
+            $("#list-group").append(list_item)
+            $("#input-area").val('')
+        }
+
+        function deleteTodo(id) {
+            $(".list-" + id).remove()
+        }
+
+    </script>
+</body>
+
+</html>
