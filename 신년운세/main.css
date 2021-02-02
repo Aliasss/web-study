@@ -1,0 +1,113 @@
+.mytitle {
+    color:darkred;
+    text-align:center;
+}
+
+.mytitle > h1 {
+    font-size: 56px;
+    margin-bottom: 0;
+}
+
+body {
+    background-color: ivory;
+    background-image: url("https://new-year.spartacodingclub.kr/images/pattern.png");
+    background-position: 800px 300px;
+    background-repeat: no-repeat;
+}
+
+* {
+    font-family: 'East Sea Dokdo', cursive;
+}
+
+.zodiacs > a {
+    display: block;   /* display: block  --> 요소를 block요소처럼 표시. 요소 앞 뒤로 줄바꿈됨 */
+    width: 150px;
+    height: 150px;
+    border: solid 3px darkred;    /* 테두리 */
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px darkred;
+    border-radius: 150px;   /* 테두리 원 모양 */
+    margin: 10px;   /* 좌우상하 10px */
+}
+
+.zodiacs {
+    display: flex;    /* 정렬. 왼쪽 세 개 코드는 한 세트 */
+    flex-direction: row;  /* 가로 정렬 */
+    justify-content: center;   /* 중앙으로 몰아넣기 */
+    flex-wrap: wrap;   /* 찌그러진 원들을 150px에 맞춰서 자동으로 줄바꿈 됨  */
+    width: 1200px;
+    margin: auto;   /* 가로 중앙 배치 */
+}
+
+.mouse {
+    /* 특정 이미지를 백그라운드에 꽉차게 넣고 싶을 땐 아래 세 옵션 활용 */
+    background-image: url("https://www.urbanbrush.net/web/wp-content/uploads/edd/2019/12/urbanbrush-20191203004132781865.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cow {
+    background-image: url("https://lh3.googleusercontent.com/proxy/rVoTtiLRCxoOj6_rKckRhgNBpgfGM64uFGTa-RFSMv-1k7qjm92j7auaM78bZzrIBiXtTPq_WSpsWFw25l3mtpt2jg_P8eph_phcOxmgO_MyAWrps5o1hldfJlKkekMLb1nyxoNKTexM0Yl0auDikdlEIWnJMl7nBkAoyDMW6I9Vn3XnrJtYKeQBfqSaYefgfiCjS488onrZ4KwzYugt2U6cKtbM2tHIuMX2PUB6h_PxzGosMs6TPJoYNmwPOFuNiqlvnlmzIkCrXiFlxwtY7fq4JZo50VSiygp1Ksrs5UUvV32Rmyf6fDHQepdcJBeQaYvu8tJRipOpi3lZFno");
+    background-size: cover;
+    background-position: center;
+}
+
+.tiger {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9dH2sRr04yoLpKD8MHxgpTibFi_x-UQuZ8Q&usqp=CAU");
+    background-size: cover;
+    background-position: center;
+}
+
+.rabbit {
+    background-image: url("https://previews.123rf.com/images/yupiramos/yupiramos1706/yupiramos170628964/80838507-%EB%B0%95%EC%A0%9C-%EB%8F%99%EB%AC%BC-%ED%86%A0%EB%81%BC-%EC%95%84%EC%9D%B4%EC%BD%98-%EB%B2%A1%ED%84%B0-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8-%EB%94%94%EC%9E%90%EC%9D%B8-%EA%B7%B8%EB%9E%98%ED%94%BD.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.dragon {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCecGyHlDUtJt8HKKbrcq3Z5tWmkj0Rxnayg&usqp=CAU");
+    background-size: cover;
+    background-position: center;
+}
+
+.snake {
+    background-image: url("https://cdn.crowdpic.net/detail-thumb/thumb_d_3E23D2E9114715ED888AA98C17767993.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.horse {
+    background-image: url("https://data.ac-illust.com/data/thumbnails/16/16a95c5a6e995bd89802121f586f8988_t.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.sheep {
+    background-image: url("https://littledeep.com/wp-content/uploads/2019/05/littledeep_sheep_style1.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.monkey {
+    background-image: url("https://data.ac-illust.com/data/thumbnails/1e/1e0738e7823101eca28ee7bd849ced4b_t.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.chicken {
+    background-image: url("https://en.pimg.jp/012/574/365/1/12574365.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.dog {
+    background-image: url("https://littledeep.com/wp-content/uploads/2019/04/littledeep_puppy_style2.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.pig {
+    background-image: url("https://littledeep.com/wp-content/uploads/2019/04/littledeep_illustration_pig_style1.png");
+    background-size: cover;
+    background-position: center;
+}
