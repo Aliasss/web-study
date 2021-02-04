@@ -5,7 +5,14 @@
 
 .mytitle > h1 {
     font-size: 56px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
+    margin-top: 150px;
+}
+
+.mytitle > h2 {
+    margin-bottom: 50px;
+    text-align: right;
+    margin-right: 30%;
 }
 
 body {
@@ -28,44 +35,42 @@ body {
     box-shadow: 0px 0px 10px 0px darkred;
     border-radius: 150px;   /* 테두리 원 모양 */
     margin: 10px;   /* 좌우상하 10px */
+
+    text-align: center;
+    color: white;   /* font color */
+    font-size: 24px;
+    text-decoration: none;
 }
 
-.zodiacs {
-    display: flex;    /* 정렬. 왼쪽 세 개 코드는 한 세트 */
-    flex-direction: row;  /* 가로 정렬 */
-    justify-content: center;   /* 중앙으로 몰아넣기 */
-    flex-wrap: wrap;   /* 찌그러진 원들을 150px에 맞춰서 자동으로 줄바꿈 됨  */
-    width: 1200px;
-    margin: auto;   /* 가로 중앙 배치 */
-}
+
 
 .mouse {
     /* 특정 이미지를 백그라운드에 꽉차게 넣고 싶을 땐 아래 세 옵션 활용 */
-    background-image: url("https://www.urbanbrush.net/web/wp-content/uploads/edd/2019/12/urbanbrush-20191203004132781865.jpg");
+    background-image: url("https://littledeep.com/wp-content/uploads/2020/02/littledeep_mouse_style2.png");
     background-size: cover;
     background-position: center;
 }
 
 .cow {
-    background-image: url("https://lh3.googleusercontent.com/proxy/rVoTtiLRCxoOj6_rKckRhgNBpgfGM64uFGTa-RFSMv-1k7qjm92j7auaM78bZzrIBiXtTPq_WSpsWFw25l3mtpt2jg_P8eph_phcOxmgO_MyAWrps5o1hldfJlKkekMLb1nyxoNKTexM0Yl0auDikdlEIWnJMl7nBkAoyDMW6I9Vn3XnrJtYKeQBfqSaYefgfiCjS488onrZ4KwzYugt2U6cKtbM2tHIuMX2PUB6h_PxzGosMs6TPJoYNmwPOFuNiqlvnlmzIkCrXiFlxwtY7fq4JZo50VSiygp1Ksrs5UUvV32Rmyf6fDHQepdcJBeQaYvu8tJRipOpi3lZFno");
+    background-image: url("https://w7.pngwing.com/pngs/979/405/png-transparent-cow-raising-thumbs-up-illustration-cattle-calf-cartoon-cartoon-cow-cartoon-character-animals-happy-birthday-vector-images.png");
     background-size: cover;
     background-position: center;
 }
 
 .tiger {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9dH2sRr04yoLpKD8MHxgpTibFi_x-UQuZ8Q&usqp=CAU");
+    background-image: url("https://lh3.googleusercontent.com/proxy/1EB8cWzWRshbl7H8DKAcNaHPhZodJqpod8byrb3NhImyENR0AymWaL2TAQQXOrnyyBQDav0j8qVH_pFc5MPILO6roSsKxW3-xNERH8_JBhmxOYD64_-EXXgDTFl_k3G2XwFZzrAMSdzVHxExlLTT");
     background-size: cover;
     background-position: center;
 }
 
 .rabbit {
-    background-image: url("https://previews.123rf.com/images/yupiramos/yupiramos1706/yupiramos170628964/80838507-%EB%B0%95%EC%A0%9C-%EB%8F%99%EB%AC%BC-%ED%86%A0%EB%81%BC-%EC%95%84%EC%9D%B4%EC%BD%98-%EB%B2%A1%ED%84%B0-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8-%EB%94%94%EC%9E%90%EC%9D%B8-%EA%B7%B8%EB%9E%98%ED%94%BD.jpg");
+    background-image: url("https://png.pngtree.com/png-clipart/20190116/ourlarge/pngtree-white-rabbit-cute-rabbit-anthropomorphic-rabbit-cartoon-illustration-png-image_410973.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .dragon {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCecGyHlDUtJt8HKKbrcq3Z5tWmkj0Rxnayg&usqp=CAU");
+    background-image: url("https://w7.pngwing.com/pngs/512/42/png-transparent-cartoon-dragon-illustration-little-monster-cartoon-dinosaur-cartoon-character-mammal-leaf.png");
     background-size: cover;
     background-position: center;
 }
@@ -77,7 +82,7 @@ body {
 }
 
 .horse {
-    background-image: url("https://data.ac-illust.com/data/thumbnails/16/16a95c5a6e995bd89802121f586f8988_t.jpeg");
+    background-image: url("https://i.pinimg.com/originals/8e/60/3e/8e603e8db8a7a239d9fcc0f3b3b158d2.png");
     background-size: cover;
     background-position: center;
 }
@@ -111,3 +116,24 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+.zodiacs {
+    display: flex;    /* 정렬. 왼쪽 세 개 코드는 한 세트 */
+    flex-direction: row;  /* 가로 정렬 */
+    justify-content: center;   /* 중앙으로 몰아넣기 */
+    flex-wrap: wrap;   /* 찌그러진 원들을 150px에 맞춰서 자동으로 줄바꿈 됨  */
+    width: 1200px;
+    margin: auto;   /* 가로 중앙 배치 */
+}
+
+/* 마우스 올리면 색이 바뀌는 효과 */
+#zodi > a:hover {
+    background-color: chocolate;
+    opacity:0.6;
+}
+
+/* .zodiacs > a:hover .btn-plus {
+    opacity:1;
+    transform:scale(1);
+} */
+
