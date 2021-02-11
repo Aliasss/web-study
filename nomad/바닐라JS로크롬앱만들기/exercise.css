@@ -1,0 +1,15 @@
+body {
+    background-color: #ecf01;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    margin-top: 25%;
+}
+
+#any {
+    color: blue;
+    text-align: center;
+    margin-top: 50px;
+}
