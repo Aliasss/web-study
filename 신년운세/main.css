@@ -58,7 +58,7 @@ body {
 }
 
 .tiger {
-    background-image: url("https://lh3.googleusercontent.com/proxy/1EB8cWzWRshbl7H8DKAcNaHPhZodJqpod8byrb3NhImyENR0AymWaL2TAQQXOrnyyBQDav0j8qVH_pFc5MPILO6roSsKxW3-xNERH8_JBhmxOYD64_-EXXgDTFl_k3G2XwFZzrAMSdzVHxExlLTT");
+    background-image: url("https://png.pngtree.com/png-clipart/20190705/original/pngtree-cute-style-hand-painted-tiger-png-image_4199945.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -137,3 +137,21 @@ body {
     transform:scale(1);
 } */
 
+/* 모바일 버전 처리 */
+@media screen and (max-width: 780px) {
+    body {
+        background-position: 70px -70px;
+        background-size: 500px;  /* 배경 문양 크기 */
+    }
+    .zodiacs {
+        width: 100%;   /*zodiacs의 width가 1200px로 고정되어 있는데, 스크린 너비가 780px보다 작을 경우, 스크린 사이즈와 꽉 맞게 조절해라*/
+    }
+    .mytitle {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    /*모바일은 hover가 없으므로 처음부터 다 보이는 게 나음*/
+    .zodiacs > a {
+        color: darkred;
+    }
+}

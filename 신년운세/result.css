@@ -1,0 +1,94 @@
+body {
+    background-color: ivory;
+    background-image: url("https://new-year.spartacodingclub.kr/images/pattern.png");
+    background-position: 800px 300px;
+    background-repeat: no-repeat;
+}
+
+* {
+    font-family: 'East Sea Dokdo', cursive;
+}
+
+.zodiac {
+    display: block;   /* display: block  --> 요소를 block요소처럼 표시. 요소 앞 뒤로 줄바꿈됨 */
+    width: 200px;
+    height: 200px;
+    border: solid 3px darkred;    /* 테두리 */
+    background-color: darkred;
+    box-shadow: 0px 0px 10px 0px darkred;
+    border-radius: 200px;   /* 테두리 원 모양 */
+    margin: 80px auto 50px auto;   /* 상단부터 시계 방향대로 */
+
+    text-align: center;
+    color: white;   /* font color */
+    font-size: 32px;
+    text-decoration: none;
+    background-image: url("https://littledeep.com/wp-content/uploads/2020/02/littledeep_mouse_style2.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.title {
+    text-align: center;
+    color: darkred;
+    font-size: 32px;
+}
+
+.msg {
+    text-align: center;
+    color: darkred;
+    font-size: 32px;
+    line-height: 48px;   /*줄간격*/
+
+}
+
+.btns {
+    display: flex;  /* 어떤 태그 밑의 내용물들을 가운데 정렬 */
+    justify-content: center;
+    flex-direction: row;
+}
+
+.btn-back {
+    width: 150px;
+    height: 50px;
+    color: darkred;
+    border: 2px solid darkred;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;  /*마우스를 버튼 위에 댔을 때 마우스 모양이 손가락 포인터 모양으로 변경*/
+}
+
+.btn-share {
+    width: 150px;
+    height: 50px;
+    color: white;
+    border: 2px solid darkred;
+    background-color: darkred;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* 모바일 버전 처리 (미디어 쿼리)*/
+@media screen and (max-width: 780px) {
+    body {
+        background-position: 70px -70px;
+        background-size: 500px
+    }
+    .zodiac {
+        margin-top: 50px;
+    }
+    .msg {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 36px;
+        padding: 10px;
+        display: none;
+    }
+    /*줄바꿈 없애기*/
+    .msg > br {
+        display: none;
+    }
+}
