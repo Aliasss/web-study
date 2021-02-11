@@ -1,0 +1,19 @@
+/* body {
+    background-color:black;
+}
+
+.js-title {
+    color:darkred;
+    text-align: center;
+    margin-top: 18%;
+    font-size: 200px;
+} */
+
+.form,
+.greetings {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
