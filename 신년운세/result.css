@@ -9,7 +9,7 @@ body {
     font-family: 'East Sea Dokdo', cursive;
 }
 
-.zodiac {
+.rtan {
     display: block;   /* display: block  --> 요소를 block요소처럼 표시. 요소 앞 뒤로 줄바꿈됨 */
     width: 200px;
     height: 200px;
@@ -77,7 +77,7 @@ body {
         background-position: 70px -70px;
         background-size: 500px
     }
-    .zodiac {
+    .rtan {
         margin-top: 50px;
     }
     .msg {

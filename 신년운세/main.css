@@ -26,7 +26,7 @@ body {
     font-family: 'East Sea Dokdo', cursive;
 }
 
-.zodiacs > a {
+.rtans > a {
     display: block;   /* display: block  --> 요소를 block요소처럼 표시. 요소 앞 뒤로 줄바꿈됨 */
     width: 150px;
     height: 150px;
@@ -44,80 +44,80 @@ body {
 
 
 
-.mouse {
+.rtan1 {
     /* 특정 이미지를 백그라운드에 꽉차게 넣고 싶을 땐 아래 세 옵션 활용 */
     background-image: url("https://littledeep.com/wp-content/uploads/2020/02/littledeep_mouse_style2.png");
     background-size: cover;
     background-position: center;
 }
 
-.cow {
+.rtan2 {
     background-image: url("https://w7.pngwing.com/pngs/979/405/png-transparent-cow-raising-thumbs-up-illustration-cattle-calf-cartoon-cartoon-cow-cartoon-character-animals-happy-birthday-vector-images.png");
     background-size: cover;
     background-position: center;
 }
 
-.tiger {
+.rtan3 {
     background-image: url("https://png.pngtree.com/png-clipart/20190705/original/pngtree-cute-style-hand-painted-tiger-png-image_4199945.jpg");
     background-size: cover;
     background-position: center;
 }
 
-.rabbit {
+.rtan4 {
     background-image: url("https://png.pngtree.com/png-clipart/20190116/ourlarge/pngtree-white-rabbit-cute-rabbit-anthropomorphic-rabbit-cartoon-illustration-png-image_410973.jpg");
     background-size: cover;
     background-position: center;
 }
 
-.dragon {
+.rtan5 {
     background-image: url("https://w7.pngwing.com/pngs/512/42/png-transparent-cartoon-dragon-illustration-little-monster-cartoon-dinosaur-cartoon-character-mammal-leaf.png");
     background-size: cover;
     background-position: center;
 }
 
-.snake {
+.rtan6 {
     background-image: url("https://cdn.crowdpic.net/detail-thumb/thumb_d_3E23D2E9114715ED888AA98C17767993.png");
     background-size: cover;
     background-position: center;
 }
 
-.horse {
+.rtan7 {
     background-image: url("https://i.pinimg.com/originals/8e/60/3e/8e603e8db8a7a239d9fcc0f3b3b158d2.png");
     background-size: cover;
     background-position: center;
 }
 
-.sheep {
+.rtan8 {
     background-image: url("https://littledeep.com/wp-content/uploads/2019/05/littledeep_sheep_style1.png");
     background-size: cover;
     background-position: center;
 }
 
-.monkey {
+.rtan9 {
     background-image: url("https://data.ac-illust.com/data/thumbnails/1e/1e0738e7823101eca28ee7bd849ced4b_t.jpeg");
     background-size: cover;
     background-position: center;
 }
 
-.chicken {
+.rtan10 {
     background-image: url("https://en.pimg.jp/012/574/365/1/12574365.jpg");
     background-size: cover;
     background-position: center;
 }
 
-.dog {
+.rtan11 {
     background-image: url("https://littledeep.com/wp-content/uploads/2019/04/littledeep_puppy_style2.png");
     background-size: cover;
     background-position: center;
 }
 
-.pig {
+.rtan12 {
     background-image: url("https://littledeep.com/wp-content/uploads/2019/04/littledeep_illustration_pig_style1.png");
     background-size: cover;
     background-position: center;
 }
 
-.zodiacs {
+.rtans {
     display: flex;    /* 정렬. 왼쪽 세 개 코드는 한 세트 */
     flex-direction: row;  /* 가로 정렬 */
     justify-content: center;   /* 중앙으로 몰아넣기 */
@@ -127,12 +127,12 @@ body {
 }
 
 /* 마우스 올리면 색이 바뀌는 효과 */
-#zodi > a:hover {
+.rtans > a:hover {
     background-color: chocolate;
     opacity:0.6;
 }
 
-/* .zodiacs > a:hover .btn-plus {
+/* .rtans > a:hover .btn-plus {
     opacity:1;
     transform:scale(1);
 } */
@@ -143,15 +143,15 @@ body {
         background-position: 70px -70px;
         background-size: 500px;  /* 배경 문양 크기 */
     }
-    .zodiacs {
-        width: 100%;   /*zodiacs의 width가 1200px로 고정되어 있는데, 스크린 너비가 780px보다 작을 경우, 스크린 사이즈와 꽉 맞게 조절해라*/
+    .rtans {
+        width: 100%;   /*rtans의 width가 1200px로 고정되어 있는데, 스크린 너비가 780px보다 작을 경우, 스크린 사이즈와 꽉 맞게 조절해라*/
     }
     .mytitle {
         margin-top: 20px;
         margin-bottom: 20px;
     }
     /*모바일은 hover가 없으므로 처음부터 다 보이는 게 나음*/
-    .zodiacs > a {
+    .rtans > a {
         color: darkred;
     }
 }
