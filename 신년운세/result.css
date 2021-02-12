@@ -39,6 +39,7 @@ body {
     color: darkred;
     font-size: 32px;
     line-height: 48px;   /*줄간격*/
+    display: none;
 
 }
 
