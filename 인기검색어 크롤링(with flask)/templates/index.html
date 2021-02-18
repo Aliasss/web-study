@@ -5,11 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
+
 <body>
-    <div>
-        html 영역 <br>
+    <div class="html-section">
+        <p>html 영역</p>
         <a href="./about">about 페이지로 이동</a>
+    </div><br><br>
+
+    <div class="today-google">
+        <p class="date">오늘 날짜 : {{date}}</p><br>
+        <ul class="contents">
+            {% for t in title %}
+            <li class="title">{{ t }}</li>
+            {% endfor %}
+        </ul>
+        <ul>
+            {% for c in content %}
+            {% for j in c %}
+            <li class="content">{{ j }}</li>
+            {% endfor %}
+            {% endfor %}
+        </ul>
     </div>
 </body>
+
 </html>

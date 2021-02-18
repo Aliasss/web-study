@@ -1,21 +1,59 @@
-from flask import Flask, render_template
-app = Flask(__name__)
-
 import requests
 from bs4 import BeautifulSoup
+import feedparser  # rss 피드 파싱 위해 feedparser import.
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
 
 @app.route('/')
 def hello():
 
-    req = requests.get('https://trends.google.co.kr/trends/trendingsearches/daily?geo=KR')
-    soup = BeautifulSoup(req.text, 'lxml')
-    print(soup)
+    url = 'https://trends.google.co.kr/trends/trendingsearches/daily/rss?geo=KR'
 
-    return render_template('index.html')
+
+    feed = feedparser.parse(url)
+
+
+    def today_date():
+        for i, j in enumerate(feed['entries']):
+            if i == 0:
+                today_date = j['published']
+                today_date = today_date.split(' ')[3] + ' ' + today_date.split(' ')[2] + ' ' + \
+                    today_date.split(' ')[1] + ' ' + today_date.split(' ')[0]
+                today_date = today_date[:-1]
+                return today_date
+            else:
+                break
+
+    def today_title():
+        today_title = []
+        for content in feed['entries']:
+            if today_date().split()[0] and today_date().split()[1] and today_date().split()[2] in content['published']:
+                today_title.append(content['title'])
+            else:
+                break
+        return today_title
+
+    def link_content():
+        link_content = []
+        for content in feed['entries']:
+            if today_date().split()[0] and today_date().split()[1] and today_date().split()[2] in content['published']:
+                link = content['ht_news_item_url']
+                title = content['ht_news_item_title']
+                snippet = content['ht_news_item_snippet']
+                link_content.append([title, link, snippet])
+            else:
+                break
+        return link_content
+
+    return render_template('index.html', date=today_date(), title=today_title(), content=link_content())
+
 
 @app.route('/about')
 def about():
     return "여기는 about"
+
 
 if __name__ == '__main__':
     app.run()
