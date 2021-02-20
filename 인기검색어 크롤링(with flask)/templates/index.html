@@ -4,31 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./index.css">
+    <title>main</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index_style.css') }}">
 </head>
 
 <body>
-    <div class="html-section">
-        <p>html 영역</p>
-        <a href="./about">about 페이지로 이동</a>
+    <div class="html_section">
+        <h1>오늘의 인기 급상승 검색어는?</h1>
+        <a class="detail" href="./detail">자세히 보러 가기</a>
     </div><br><br>
-
-    <div class="today-google">
-        <p class="date">오늘 날짜 : {{date}}</p><br>
-        <ul class="contents">
-            {% for t in title %}
-            <li class="title">{{ t }}</li>
-            {% endfor %}
-        </ul>
-        <ul>
-            {% for c in content %}
-            {% for j in c %}
-            <li class="content">{{ j }}</li>
-            {% endfor %}
-            {% endfor %}
-        </ul>
-    </div>
 </body>
 
 </html>

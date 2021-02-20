@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detail_style.css') }}">
+    <title>detail contents</title>
+</head>
+
+<body>
+    <!-- {% block body %} -->
+    <div class="today_google">
+        <p class="date">오늘 날짜 : {{date}}</p><br>
+        <h2 class="rank">검색어 순위</h2>
+        <div class="contents">
+            {% for t in title %}
+                <p class="title">{{ t }}</p>
+            {% endfor %}
+        </div>
+        <ul>
+            {% for i, j in enumerate(content) %}
+                {% if i == 0 %}
+                    <a href="{{j[1]}}"><li>{{ j[0] }}</li></a>
+                    <p>요약: {{ j[2] }}</p>
+                {% else %}
+                    <a href="{{j[1]}}"><li>{{ j[0] }}</li></a>
+                    <p>요약: {{ j[2] }}</p>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+<!-- {% endblock %} -->
+<!-- </body> -->
+
+</html>

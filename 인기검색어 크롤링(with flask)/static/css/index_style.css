@@ -1,0 +1,21 @@
+body {
+    background-color:rgb(156, 224, 213);
+}
+
+h1 {
+    color:rgba(235, 13, 205, 0.466);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.detail {
+    display: block;
+    text-align: center;
+    margin-top: 100px;
+    color: rgb(145, 18, 196);
+}
+.date {
+    color: rgb(58, 48, 48);
+    text-align: center;
+} 
+
