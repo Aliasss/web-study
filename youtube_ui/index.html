@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b1616a8850.js" crossorigin="anonymous"></script>
+    <title>Youtube clone</title>
+</head>
+
+<body>
+    <!-- emmet 활용-->
+    <!-- header+section.player+section.info+section.UpNext -->
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fab fa-youtube"></i>
+            <span class="title">Youtube</span>
+        </div>
+        <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
+    </header>
+
+    <!-- Video Player -->
+    <section class="player">
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/juhZlwS0ekw?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <video controls src="video/video1.mp4"></video>
+    </section>
+
+    <!-- video info -->
+    <section class="info">
+        <!-- Meta data-->
+        <div class="metadate">
+            <ul class="hashtags">
+                <li>#강릉</li>
+                <li>#불꽃놀이</li>
+                <li>#200일 기념여행</li>
+                <li>#다은&동섭</li>
+            </ul>
+            <div class="titleAndButton">
+                <span class="title">
+                    2021.02.05~2021.02.08: 200일 기념 단동이 강릉 여행 :)
+                </span>
+                <button class="moreBtn">
+                    <i class="fas fa-caret-down"></i>
+                </button>
+            </div>
+            <div class="views">
+                <span class="views">1M views 1 day ago</span>
+            </div>
+        </div>
+        <!-- Actions-->
+        <ul class="actions">
+            <!-- (1i>button)*5 -->
+            <li>
+                <button><i class="fas fa-thumbs-up"></i><span>1K</span></button>
+            </li>
+            <li>
+                <button><i class="fas fa-thumbs-down"></i><span>0</span></button>
+            </li>
+            <li>
+                <button><i class="fas fa-share"></i><span>Share</span></button>
+            </li>
+            <li>
+                <button><i class="fas fa-plus"></i><span>Save</span></button>
+            </li>
+            <li>
+                <button><i class="fab fa-font-awesome-flag"></i><span>Report</span></button>
+            </li>
+        </ul>
+        <!-- Channel Description-->
+        <div class="channel">
+            <div class="metadata">
+                <img src="img/me.jpg" alt="">
+                <div class="info">
+                    <span class="name">단동이</span>
+                    <span class="subscribers">10M subscribers</span>
+                </div>
+            </div>
+            <button class="subscribe">subscribe</button>
+        </div>
+    </section>
+    <section class="upNext">
+        <span class="title">Up next</span>
+        <ul>
+            <li class="item">
+                <img src="img/강릉_cafe.jpg" alt="">
+                <div class="info">
+                    <span class="title">
+                        200일 기념 강릉 마지막 날, 기차 타기 전 강릉역 근처 카페에서 :)
+                    </span>
+                    <span class="name">단동이</span>
+                    <span class="views">1M views</span>
+                </div>
+                <button class="moreBtn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+            </li>
+            <li class="item">
+                <img src="img/chocolate_cafe.jpg" alt="">
+                <div class="info">
+                    <span class="title">
+                        왕십리역 근처 초콜릿 카페에서... 그치만 초콜릿 아이스크림을 먹지 않았다는...
+                    </span>
+                    <span class="name">단동이</span>
+                    <span class="views">72K views</span>
+                </div>
+                <button class="moreBtn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+            </li>
+            <li class="item">
+                <img src="img/acryl_paint.jpg" alt="">
+                <div class="info">
+                    <span class="title">
+                        아크릴로 서로가 정해준 그림 그린 날. 승자는 과연 누구...?
+                    </span>
+                    <span class="name">단동이</span>
+                    <span class="views">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                </div>
+                <button class="moreBtn"></button>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>
