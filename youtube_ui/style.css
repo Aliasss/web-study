@@ -29,6 +29,18 @@ body {
     font-family: Roboto;
 }
 
+ul {
+    list-style: none;  /* 문장 앞에 붙는 점이 사라짐 */
+}
+
+button,
+button:focus {
+    /* 브라우저 자체에서 주는 버튼 속성을 없앰 */
+    border: none;
+    cursor: pointer;
+    outline: none;           
+}
+
 /* Header */
 header {
     display: flex;
@@ -58,7 +70,6 @@ header .icons .fa-search {
     top: 0;   /* sticky를 주는데, 위와의 간격이 0, 즉 top에 딱 붙어있어라 */
     text-align: center;
     background-color: var(--black-color);
-
 }
 
 .player video{
@@ -66,4 +77,42 @@ header .icons .fa-search {
     width: 100%;
     height: 100%;
     max-width: 1000px;   /* 최대 너비 제한 */
+}
+
+.info {
+    padding: var(--padding);
+}
+
+.info .metadata .hashtags {
+    display: flex;
+    font-size: var(--font-small);
+    color: var(--blue-color);
+}
+
+.info .metadata .hashtags > li {
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton {
+    display: flex;
+}
+
+.info .metadata .titleAndButton .title {
+    font-size: var(--font-medium);
+    /* line clamp */
+    /* 블록 컨테이터의 콘텐츠를 지정한 줄 수 만큼 제한 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;   /* 2줄로 제한 */
+    overflow: hidden;
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .moreBtn {
+    height: 100%;
+}
+
+.info .views {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
 }
