@@ -79,7 +79,7 @@ header .icons .fa-search {
     max-width: 1000px;   /* 최대 너비 제한 */
 }
 
-.info {
+body > .info {
     padding: var(--padding);
 }
 
@@ -99,13 +99,16 @@ header .icons .fa-search {
 
 .info .metadata .titleAndButton .title {
     font-size: var(--font-medium);
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .title.clamp {
     /* line clamp */
     /* 블록 컨테이터의 콘텐츠를 지정한 줄 수 만큼 제한 */
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;   /* 2줄로 제한 */
     overflow: hidden;
-    margin-right: var(--padding);
 }
 
 .info .metadata .titleAndButton .moreBtn {
@@ -115,4 +118,130 @@ header .icons .fa-search {
 .info .views {
     font-size: var(--font-small);
     color: var(--grey-dark-color);
+}
+
+.actions {
+    display: flex; 
+    justify-content: space-around;   /* 간격 */
+    margin: var(--padding) 0;  /* padding을 주고 양 옆은 없앰 */
+}
+
+.actions button {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.actions button i {
+    margin: 0 auto;   /* 위 아래로 마진을 주지 않고 양옆을 auto로 주면 아이콘들이 중간에 위치하게 됨*/
+    margin-bottom: calc(var(--padding) / 2);  /* 위에서 지정한 padding 값의 절반만 */
+    font-size: 16px;
+}
+
+.actions button i.active {
+    color: var(--blue-color);
+}
+
+/* Channel Description */
+.channel {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--grey-light-color);
+    border-bottom: 1px solid var(--grey-light-color);
+}
+
+.channel .metadata {
+    display: flex;
+    align-items: center;
+}
+
+.channel .metadata img {
+    width: var(--me-size);
+    height: var(--me-size);
+    border-radius: 50%
+}
+
+.channel .metadata .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.channel .metadata .info .name {
+    font-size: var(--font-medium);
+}
+
+.channel .metadata .info .subscribers {
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+}
+
+.channel .subscribe {
+    text-transform: uppercase;
+    color: var(--red-color);
+    font-size: var(--font-medium);
+}
+
+/* Up Next */
+.upNext {
+    padding: 0 var(--padding);
+}
+
+.upNext > .title {
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+    margin-bottom: calc(var(--padding) / 2);
+}
+
+.upNext .item {
+    display: flex;
+    margin-top: var(--padding);     
+}
+
+.upNext .item .img {
+    flex: 1 1 35%;   /* 줄어들때나 늘어날때는 각각 1 1 로 지정 */
+    margin-right: var(--padding);
+}
+
+.upNext .item .img img {
+    width: 100%;
+    height: 200px;
+}
+
+.upNext .item .info {
+    flex: 1 1 60%;
+
+}
+
+.upNext .item .moreBtn {
+    height: 100%;
+    flex: 1 1 5%;
+}
+
+.upNext .item .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.upNext .item .info .title {
+    font-size: var(--font-small);
+}
+
+.upNext .item .info .name,
+.upNext .item .info .views {
+    font-size: var(--font-micro);
+    color: var(--grey-dark-color);
+}
+
+.infoAndUpNext {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 미디어 너비가 768px 이상일 때 아래 내용이 적용됨*/
+@media screen and (min-width: 768px) {
+    .infoAndUpNext {
+        flex-direction: row;
+        margin: var(--padding) 0;
+    }
 }
