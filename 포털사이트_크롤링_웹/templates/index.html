@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+</head>
+<body>
+    <div id="wrap">
+        <form action="/result" method="POST">   <!-- 주의 -->
+            <div class="form-group">
+                <h1>키워드 입력</h1>
+                <label for="exampleInputEmail1">크롤링 할 키워드</label>
+                <input type="text" class="form-control" name="input1" placeholder="키워드를 입력해주세요">
+            </div>
+            <div class="form-group">
+                <h1>페이지 입력</h1>
+                <label for="exampleInputPassword1">페이지수</label>
+                <input type="number" class="form-control" name="input2" placeholder="크롤링 할 페이지수를 입력해주세요">
+            </div>
+            <button type="submit" class="btn btn-default">확인</button>
+        </form>
+    </div>
+</body>
+
+</html>
