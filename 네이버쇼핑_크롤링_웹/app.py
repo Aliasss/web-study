@@ -14,22 +14,36 @@ app = Flask(__name__)
 def hello():
     return render_template("index.html")
 
-
 @app.route('/result')
 def result():
+    titles = []
+    links = []
+    # imgs = []
+
     driver = webdriver.Chrome(
         "C:/Users/seob6/Desktop/chromedriver/chromedriver/chromedriver.exe")
     driver.implicitly_wait(3)
-    driver.get("https://search.shopping.naver.com/search/all?query=%EA%B3%B5%EA%B8%B0%EC%B2%AD%EC%A0%95%EA%B8%B0&cat_id=&frm=NVSHATC")
-    html = driver.page_source()
-    soup = BeautifulSoup(html, 'lxml')
+    driver.get("https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=공기청정기&pagingIndex=1&pagingSize=20&productSet=total&query=공기청정기&sort=rel&timestamp=&viewType=list")
 
-    titles = []
-    # imgs =
-    for title in soup.select("div.basicList_info_area__17Xyo"):
-        print(title[0])
+    last_height = driver.execute_script("return document.body.scrollHeight")
+    while 1:
+        # scroll down to bottom
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        driver.implicitly_wait(2)
 
-        # return render_template("result.html")
+        # calculate new scroll height and compare with last scroll height
+        new_height = driver.execute_script("return document.body.scrollHeight")
+        if new_height == last_height:
+            html = driver.page_source
+            soup = BeautifulSoup(html, 'html.parser')
+            title_links = soup.select("div.basicList_info_area__17Xyo > div.basicList_title__3P9Q7 > a")
+            for title_link in title_links:
+                titles.append(title_link.text)
+                links.append(title_link['href'])
+            break
+        last_height = new_height
+
+    return render_template("result.html", titles=titles, links=links, zip=zip)
 
 
 if __name__ == '__main__':

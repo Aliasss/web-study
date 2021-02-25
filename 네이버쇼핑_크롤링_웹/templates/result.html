@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css')}}">
 </head>
-
 <body>
-    
+    <ul>
+        {% for title, link in zip(titles, links) %}
+            <a href="{{link}}"><li>{{ title }}</li></a>
+        {% endfor %}
+    </ul>
 </body>
-
 </html>

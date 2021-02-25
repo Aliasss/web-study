@@ -15,13 +15,13 @@
     <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
 </head>
 
 <body>
     <div id="wrap">
         <form action="/result">
-            <button type="submit">네이버 쇼핑 리스트 크롤링</button>
+            <button type="submit" class="crawl_btn">네이버 쇼핑 리스트 크롤링</button>
         </form>
     </div>
 </body>
