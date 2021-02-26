@@ -1,13 +1,20 @@
+body {
+    margin: 0 auto;
+}
+
+ 
 .form-control {
     width: 50%;
     margin: auto;
 }
 
-#wrap button{
-    width: 400px;
-    margin-top: 100px;
-    font-size: 30px;
+h1, h2, label {
+    text-align: center;
 }
+
+.btn{
+    margin: 0 auto;
+} 
 
 /* .crawl_btn {
     display: flex;
